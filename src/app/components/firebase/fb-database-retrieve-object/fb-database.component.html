@@ -1,0 +1,8 @@
+ <h1>Database data: Retrieving data as objects</h1>
+ <h2>{{ item | async | json }}</h2>
+ <input type="text" #newname placeholder="Name" />
+ <input type="text" #newsize placeholder="Size" />
+ <br />
+ <button (click)="save(newname.value)">Set Name</button>
+ <button (click)="update(newsize.value)">Update Size</button>
+ <button (click)="delete()">Delete</button>

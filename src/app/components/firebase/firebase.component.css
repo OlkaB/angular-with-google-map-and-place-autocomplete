@@ -1,0 +1,12 @@
+.loginForm, .signInForm {
+    border: 1px solid black;
+    max-width:  300px;
+}
+
+.loginForm {
+    background-color: lightgray;
+}
+
+.signInForm {
+    background-color: coral;
+}

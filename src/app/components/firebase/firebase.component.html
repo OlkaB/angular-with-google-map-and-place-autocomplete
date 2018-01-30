@@ -1,0 +1,38 @@
+<h2>Sign in</h2>
+<form class="logInForm">
+	<div *ngIf="afAuth.authState | async as user; else showLogin">
+		<h1>Hello {{ user.email }}!</h1>
+		<button (click)="logout()">Logout</button>
+	</div>
+	<ng-template #showLogin>
+		<p>Please login.</p>
+		<button (click)="login()">Login with Google</button>
+	</ng-template>
+</form>
+
+<br><br><br><br>
+
+<h2>Register</h2>
+<form class="signInForm">
+	<label for="e-mail">Email: </label><input class="form-control" type="email" autocomplete="on" ref-userEmail><br><br>
+	<label for="e-mail">Password: </label><input class="form-control" type="password" autocomplete="on"  ref-userPassword>
+	<br>
+	<p>Sign in:</p>
+	<button (click)="signInNewUser(userEmail.value, userPassword.value)">I'm new, sign me in</button><br><br>
+	<p>Sign in ANONYM:</p>
+	<button (click)="signInNewUser(userEmail.value, userPassword.value)">Anonymous enetr</button>
+</form>
+<p>new email: {{userEmail.value}}</p>
+<p>new password: {{userPassword.value}}</p>
+
+
+
+<h2>Initial data</h2>
+<ul>
+	<li>email: {{email}}</li>
+	<li>emailVerified {{emailVerified}}</li>
+	<li>photoURL: {{photoURL}}</li>
+	<li>isAnonymous: {{isAnonymous}}</li>
+	<li>uid: {{uid}}</li>
+	<li>providerData: {{providerData}}</li>
+</ul>

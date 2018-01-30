@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MouseEvent } from '@agm/core';
 
 @Component({
@@ -6,6 +6,9 @@ import { MouseEvent } from '@agm/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-	
+export class AppComponent implements OnInit {
+	ngOnInit() {
+		alert("Firebase source code and tutorial: \n\nhttps://github.com/angular/angularfire2/blob/master/docs/rtdb/objects.md\n\n http://javasampleapproach.com/angular-tutorial#Firebase_Realtime_Database");
+		console.log("https://github.com/angular/angularfire2/blob/master/docs/rtdb/objects.md \n\n http://javasampleapproach.com/angular-tutorial#Firebase_Realtime_Database");
+	}
 }

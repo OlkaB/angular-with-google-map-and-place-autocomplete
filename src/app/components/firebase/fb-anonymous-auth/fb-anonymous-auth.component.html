@@ -1,0 +1,12 @@
+<div *ngIf="!authService.isUserAnonymousLoggedIn">
+	<button (click)="signInAnonymously()">Login</button>
+</div>
+
+
+<div *ngIf="authService.isUserAnonymousLoggedIn">
+	<h5 class="text-primary">User Information</h5>
+	<h4>
+		<strong>UID:</strong> {{ authService.currentUserId }}
+	</h4>
+	<button class="button" (click)="logout()">Logout</button>
+</div>
